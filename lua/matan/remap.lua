@@ -29,7 +29,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- delets into the void
 vim.keymap.set("i", "jj", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format) -- formats
+vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format) -- formats
 
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) --replace the word that you are on
