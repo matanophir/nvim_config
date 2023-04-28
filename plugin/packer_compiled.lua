@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/matan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/matan/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/matan/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -113,6 +118,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matan/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/home/matan/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/matan/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -155,6 +170,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/matan/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
   },
   undotree = {
     loaded = true,

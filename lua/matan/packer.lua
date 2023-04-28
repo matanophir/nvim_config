@@ -42,12 +42,21 @@ return require('packer').startup(function(use)
             { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             { 'L3MON4D3/LuaSnip' },     -- Required
+
         }
     }
+
+    -- setup of init.lua
+    use { 'folke/neodev.nvim' }
+
+    -- nvim-lsp progress.
+    use { 'j-hui/fidget.nvim' }
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use 'numToStr/Comment.nvim'
-
+    use 'windwp/nvim-autopairs'
+    use 'xiyaowong/transparent.nvim'
 end)

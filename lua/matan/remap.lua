@@ -1,6 +1,12 @@
 vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>q", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>fs", vim.cmd.write)
+vim.keymap.set("n", "<leader>fs", vim.cmd.write) -- file save
+
+vim.keymap.set("n", "<leader>fp", function() -- copy curr file path to clipboard
+    local path = vim.fn.expand("%:p")
+    vim.fn.setreg("+", path)
+end)
 
 vim.keymap.set("n", "<Enter>", "o<ESC>")
 
