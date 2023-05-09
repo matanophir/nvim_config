@@ -39,9 +39,10 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },     -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },     -- Required
+            { 'hrsh7th/nvim-cmp' },         -- Required
+            { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+            { 'L3MON4D3/LuaSnip' },         -- Required
+            { 'saadparwaiz1/cmp_luasnip' }, -- Required
 
         }
     }
@@ -59,4 +60,21 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim'
     use 'windwp/nvim-autopairs'
     use 'xiyaowong/transparent.nvim'
+
+    -- file explorer - nvim tree
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons'
+    use 'akinsho/toggleterm.nvim'
+    use "rafamadriz/friendly-snippets"
+
+    -- color scheme
+    use "rebelot/kanagawa.nvim"
+
+    -- auto docs
+    use {
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
+    }
+    -- easy motion
+    use 'easymotion/vim-easymotion'
 end)

@@ -1,0 +1,1 @@
+-- the default binding is <leader><leader> 

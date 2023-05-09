@@ -42,13 +42,15 @@ local on_attach = function(_, bufnr)
     --vim.lsp.buf.format()
     --end, { desc = 'Format current buffer with LSP' })
     -- Format on save
-    vim.api.nvim_create_autocmd('BufWritePre', {
-        group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
-        buffer = bufnr,
-        callback = function()
-            vim.lsp.buf.format()
-        end
-    })
+
+    -- vim.api.nvim_create_autocmd('BufWritePre', {
+    --     group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
+    --     buffer = bufnr,
+    --     callback = function()
+    --         vim.lsp.buf.format()
+    --     end
+    -- })
+    --
 end
 
 -- Enable the following language servers
@@ -135,6 +137,9 @@ local kind_icons = {
     TypeParameter = "",
 }
 
+
+require("luasnip/loaders/from_vscode").lazy_load()
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -149,6 +154,13 @@ cmp.setup {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
+        -- ['<Space>'] = cmp.mapping(function(fallback)
+        --     if cmp.visible() then
+        --         cmp.cancel()
+        --     else
+        --         fallback()
+        --     end
+        -- end, { 'i', 's' }),
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
